@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Trump-flavored Fake News Generator">
+	<meta name="keywords" content="trump, fake news, generator">
+	<meta name="author" content="Aaron & Darshana">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FAKE NEWS</title>
+	  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	  <link rel="stylesheet" href="style.css">
+
+	  <!-- <link rel="stylesheet" href="mediaqueries.css"> -->
+</head>
+<!-- //AARON DO YOU SEE THIS - I DO. COOOOOOOL. -->
+<body class="clearfix">
+	<!--
+	Fake News Website Generator!
+	>> Choose from 3 themes: Big Flashy, Olde Timey, Tabloid
+	>> Generate fake news
+		>> how to generate relevant lorem ipsum
+		>> how to generate images
+		>> 
+	>> Input news cues! 
+	>> share with friends
+		>> how?
+	
+	 -->
+	<div class="bgUnderlay"></div>
+	<div class="container">
+		<div class="marquee">
+			<div>
+				<span>"Sorry losers and haters, but my I.Q. is one of the highest -and you all know it! Please don't feel so stupid or insecure, it's not your fault" - Donald J. Trump, 45th President of the United States of America</span>
+				<span>"Sorry losers and haters, but my I.Q. is one of the highest -and you all know it! Please don't feel so stupid or insecure, it's not your fault" - Donald J. Trump, 45th President of the United States of America</span>
+			</div>
+		</div>
+		<div class="wrapper ">
+		<header>
+			<div class="logoWrapper">
+				<a href=""><div class="logo">FNG</div>
+				<p class="subtitle">Fake News Generator</p></a>
+			</div>
+			<div class="toolboxMenu">
+				<button class="toolboxButton clickClose">Choose Your News!</button>
+
+			</div>
+							<aside id="toolbox">
+					<!-- <div class="bgUnderlay2 clickClose"></div> -->
+					<h1 class="">Choose Your News</h1>
+					<form action="">
+						<form class="buttonBox">
+							<input id="headline" type="text" class="submitWriter" placeholder="Who's writing the Fake News?">
+							<h3 class="">Headline subject:</h3>
+							<div class="group">
+								
+								<input type="radio" name="group1" value="himself" id="one-one"></input>
+								<label for="one-one">Trump</label>
+								<input type="radio" name="group1" value="opponent" id="one-two"></input>
+								<label for="one-two">His enemies</label>
+								<input type="radio" name="group1" value="policy" id="one-three"></input>
+								<label for="one-three">His Policies</label>
+							</div>
+							<h3 class="">Truthy-ness Factor:</h3>
+							<div class="group">
+								<input type="radio" name="group2" value="dubious" id="outrage-one"></input>
+								<label for="outrage-one">Dubious</label>
+								<input type="radio" name="group2" value="doubtful" id="outrage-two"></input>
+								<label for="outrage-two">Doubtful</label>
+								<input type="radio" name="group2" value="donald" id="outrage-three"></input>
+								<label for="outrage-three">THE DONALD</label>
+							</div>
+						</form>
+						<button class="Trump-it">TRUMP IT UP!</button>
+					</form>
+				</aside>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="http://thoughtcatalog.com/lorenzo-jensen-iii/2015/07/50-donald-trump-quotes-that-are-so-dumb-theyll-make-your-brain-hurt/">home</a></li>
+				<li><a href="http://abcnews.go.com/">USA News</a></li>
+				<li><a href="http://www.cbsnews.com/">americanews</a></li>
+				<li><a href="http://www.politifact.com/">truthys</a></li>
+				<li><a href="http://www.breitbart.com/">falseys</a></li>
+				<li><a href="http://aaronroberts.io/">about</a></li>
+				<li><a href="http://darshanasen.com/">contact</a></li>
+			</ul>
+		</nav>
+		<main>
+			<article class="clearfix">
+				<div class="breakingNewsWrapper">
+					<p class="breakingnews">Breaking News</p>
+				</div>
+				<div class="headlineWrapper">
+					<h1 class="headline"></h1>
+				</div>
+				<div class="contentWrapper clearfix">
+					
+					<div class="image-thing">
+						<div id="layer3"></div>
+						<div id="layer2"></div>
+						<div id="layer1"></div>
+					</div>
+					<div class="text-block">
+						<div class="meta-data">
+							<h3>BY <span class="meta-author">a Serious Journalist</span> </h3> <!-- author via js -->
+							<!-- <h3>DATE <span class="meta-date"></span></h3> --> <!-- date via js -->
+						</div>
+						<p class="paragraph"></p>
+					</div>
+				</div>
+			</article>
+			
+		</main>
+		<footer>
+			<a class="twitter-share-button"
+			  href="https://twitter.com/intent/tweet?text=MAKE%20AMERICAN%20FAKE%20NEWS%20AGAIN%20with%20this%20handy%20generator"
+			  data-size="large">
+			Tweet</a>
+			<p><span>Trump'd Up Fake News</span> brought to you by <a href="http://aaronroberts.io/">Aaron Roberts</a> & <a href="http://darshanasen.com/">Darshana Sen</a> &copy; 2017</p>
+		</footer>
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+
+	  <script type="text/javascript" src="script.js"></script>
+
+	  <script>window.twttr = (function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0],
+	      t = window.twttr || {};
+	    if (d.getElementById(id)) return t;
+	    js = d.createElement(s);
+	    js.id = id;
+	    js.src = "https://platform.twitter.com/widgets.js";
+	    fjs.parentNode.insertBefore(js, fjs);
+
+	    t._e = [];
+	    t.ready = function(f) {
+	      t._e.push(f);
+	    };
+
+	    return t;
+	  }(document, "script", "twitter-wjs"));</script>
+</body>
+</html>
