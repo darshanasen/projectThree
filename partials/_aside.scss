@@ -1,52 +1,49 @@
 aside{
+	transition: all 0.3s ease;
 	transform-origin:100% 0%;
 	opacity:1;
 	z-index:50;
 	transition: all 0.3s ease;
-	position:absolute;
-	top:6rem;
-	right:0;
+	// position:absolute;
+	// top:6rem;
+	// right:0;
 	padding:0 2rem;
 	width:100%;
 	max-width:40rem;
-	margin:auto;
-	border-top:1px solid rgba(255,255,255,0.5);
-	box-shadow: -8px 0px 8px rgba(0,0,0,0.6);
+	margin:3rem auto;
+	border-top:1px solid rgba(255,255,255,0.3);
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.6);
 	border-radius:5px;
-	background: linear-gradient(rgba(3, 6, 29, 0.9), rgba(20, 29, 131, 0.95)), url(assets/trumpsmirk.jpg);
+	background: linear-gradient(rgba(3, 6, 29, 0), rgba(20, 29, 131, 0.8));
 	background-position:center center;
 	background-size:cover;
 	background-repeat: no-repeat;
-	form{
+	#chooseNews{
 		display:flex;
 		flex-direction:column;
-	}
-	form.buttonBox{
 		display:flex;
-		flex-direction:row;
-		// flex-wrap:wrap;
+	}
 
-	}
-	.group{
-		display:flex;
-		flex-direction:row;
+	fieldset{
+		margin:0;
+		padding:0;
+		border:none;
+		font-size:0;
 
 	}
 	label{
 		z-index:10;
-		flex-grow:1;
+		font-size:1rem;
+		width:calc(100%/3);
 		border-top:2px solid rgba(0,0,0,0.0);
 		border-bottom:2px solid #666666;
+		border-right:2px solid #222da5;
 		text-align:center;
 		display:inline-block;
-		// border:2px solid black;
 		background: rgba(0,0,0,0.8);
 		padding:1rem;
-		// max-resolution: position:absolute;
 		margin:0rem 0;
 		cursor:pointer;
-		font-weight:700;
-		text-transform: uppercase;
 		box-shadow:0px 4px 16px rgba(0,0,0,0.6);
 		&:hover{
 			z-index:20;
@@ -54,17 +51,26 @@ aside{
 			background:#383838;
 			border-bottom:2px solid red;
 			box-shadow:0px 8px 24px rgba(0,0,0,0.9);
-			padding:1rem;
 		}
+	}
+	label:last-child{
+		border-right: none;
 	}
 	h1, h2, h3{
 		margin:0;
 		padding:1.5em 0 1em 0;
 	}
+	h1{
+		text-align: center;
+		font-size:2.5rem;
+		padding: 2rem 0 1.5rem 0;
+		// text-transform: uppercase;
+		text-shadow:0px 4px 8px rgba(0,0,0,0.7);
+	}
 	.submitWrapper{
 		display:flex;
 	}
-	#headline{
+	#authorName{
 		border:none;
 		border-bottom:2px solid #666;
 		flex-grow:1;
@@ -129,6 +135,7 @@ aside{
 		font-weight:900;
 		font-size:2rem;
 		margin: 2rem 0;
+		color:black;
 		&:hover{
 			background:linear-gradient(#FEEBB7,#FFDF7F, #DF8E1F);
 		}
