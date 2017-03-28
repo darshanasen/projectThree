@@ -7,26 +7,12 @@
 	<meta name="author" content="Aaron & Darshana">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>FAKE NEWS</title>
+	  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	  <link rel="stylesheet" href="style.css">
-
-	  <!-- <link rel="stylesheet" href="mediaqueries.css"> -->
 </head>
-<!-- //AARON DO YOU SEE THIS - I DO. COOOOOOOL. -->
 <body class="clearfix">
-	<!--
-	Fake News Website Generator!
-	>> Choose from 3 themes: Big Flashy, Olde Timey, Tabloid
-	>> Generate fake news
-		>> how to generate relevant lorem ipsum
-		>> how to generate images
-		>> 
-	>> Input news cues! 
-	>> share with friends
-		>> how?
-	
-	 -->
 	<div class="bgUnderlay"></div>
 	<div class="container">
 		<div class="marquee">
@@ -41,39 +27,6 @@
 				<a href=""><div class="logo">FNG</div>
 				<p class="subtitle">Fake News Generator</p></a>
 			</div>
-			<div class="toolboxMenu">
-				<button class="toolboxButton clickClose">Choose Your News!</button>
-
-			</div>
-							<aside id="toolbox">
-					<!-- <div class="bgUnderlay2 clickClose"></div> -->
-					<h1 class="">Choose Your News</h1>
-					<form action="">
-						<form class="buttonBox">
-							<input id="headline" type="text" class="submitWriter" placeholder="Who's writing the Fake News?">
-							<h3 class="">Headline subject:</h3>
-							<div class="group">
-								
-								<input type="radio" name="group1" value="himself" id="one-one"></input>
-								<label for="one-one">Trump</label>
-								<input type="radio" name="group1" value="opponent" id="one-two"></input>
-								<label for="one-two">His enemies</label>
-								<input type="radio" name="group1" value="policy" id="one-three"></input>
-								<label for="one-three">His Policies</label>
-							</div>
-							<h3 class="">Truthy-ness Factor:</h3>
-							<div class="group">
-								<input type="radio" name="group2" value="dubious" id="outrage-one"></input>
-								<label for="outrage-one">Dubious</label>
-								<input type="radio" name="group2" value="doubtful" id="outrage-two"></input>
-								<label for="outrage-two">Doubtful</label>
-								<input type="radio" name="group2" value="donald" id="outrage-three"></input>
-								<label for="outrage-three">THE DONALD</label>
-							</div>
-						</form>
-						<button class="Trump-it">TRUMP IT UP!</button>
-					</form>
-				</aside>
 		</header>
 		<nav>
 			<ul>
@@ -86,8 +39,9 @@
 				<li><a href="http://darshanasen.com/">contact</a></li>
 			</ul>
 		</nav>
-		<main>
-			<article class="clearfix">
+		<main id="main">
+			
+			<article id="newsArticle" class="clearfix">
 				<div class="breakingNewsWrapper">
 					<p class="breakingnews">Breaking News</p>
 				</div>
@@ -103,21 +57,49 @@
 					</div>
 					<div class="text-block">
 						<div class="meta-data">
-							<h3>BY <span class="meta-author">a Serious Journalist</span> </h3> <!-- author via js -->
-							<!-- <h3>DATE <span class="meta-date"></span></h3> --> <!-- date via js -->
+							<h3>BY <span class="meta-author">a Serious Journalist</span> </h3>
 						</div>
 						<p class="paragraph"></p>
 					</div>
 				</div>
+
+				<div class="toolboxMenu">
+					<button class="toolboxButton clickClose">Choose Your News!</button>
+				</div>
 			</article>
+			<aside id="toolbox">
+				<h1 class="">Choose Your News</h1>
+				<form id="chooseNews" class="buttonBox">
+					<input id="authorName" type="text" class="submitWriter" placeholder="Who's writing the Fake News?" autofocus="yes">
+					<h3 class="">Headline subject:</h3>
+					<fieldset id="group1" class="group">
+						<input type="radio" name="group1" value="himself" id="one-one" required></input><!--
+						--><label for="one-one">Trump</label><!--
+						--><input type="radio" name="group1" value="opponent" id="one-two" required></input><!--
+						--><label for="one-two">His enemies</label><!--
+						--><input type="radio" name="group1" value="policy" id="one-three" required></input><!--
+						--><label for="one-three">His Policies</label>
+					</fieldset>
+					<h3 class="">Truthy-ness Factor:</h3>
+					<fieldset id="group2">
+						<input type="radio" name="group2" value="dubious" id="outrage-one" required></input><!--
+						--><label for="outrage-one">Dubious</label><!--
+						--><input type="radio" name="group2" value="doubtful" id="outrage-two" required></input><!--
+						--><label for="outrage-two">Doubtful</label><!--
+						--><input type="radio" name="group2" value="donald" id="outrage-three" required></input><!--
+						--><label for="outrage-three">THE DONALD</label>
+					</fieldset>
+					<button type="submit" class="Trump-it">TRUMP IT UP!</button>
+				</form>
+			</aside>
 			
 		</main>
 		<footer>
+			<p><span>Trump'd Up Fake News</span> brought to you by <a href="http://aaronroberts.io/">Aaron Roberts</a> & <a href="http://darshanasen.com/">Darshana Sen</a> &copy; 2017</p>
 			<a class="twitter-share-button"
 			  href="https://twitter.com/intent/tweet?text=MAKE%20AMERICAN%20FAKE%20NEWS%20AGAIN%20with%20this%20handy%20generator"
 			  data-size="large">
 			Tweet</a>
-			<p><span>Trump'd Up Fake News</span> brought to you by <a href="http://aaronroberts.io/">Aaron Roberts</a> & <a href="http://darshanasen.com/">Darshana Sen</a> &copy; 2017</p>
 		</footer>
 		</div>
 	</div>

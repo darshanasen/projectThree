@@ -306,25 +306,31 @@ $(function(){
 		]
 		//unfortunately some of these quotes are real
 	}
-
-	$('.Trump-it').on('click',function(e){
+	var articleLoaded = false;
+	console.log($('#chooseNews'));
+	$('#chooseNews').on("submit", function(e){
 		e.preventDefault();
+		// sets choice1 && choice2 from group1 && group2 clicked thing
+		var choice1= $('input[name=group1]:checked').val();
+		var choice2= $('input[name=group2]:checked').val();
+		// creates array of potential articles based on choices
+		var potentialArticles = articles[choice1].filter(function(article){
+			return article.selection === choice2;
+		})
+		// choose random article from array
+		var chosenArticle = getRandomArrayElement(potentialArticles);
 
-		$('article').fadeOut( "400", function() {
+		// sets author name
+		var userText = $('input[id=authorName]').val();
 
-			var choice1= $('input[name=group1]:checked').val();
-			var choice2= $('input[name=group2]:checked').val();
+		// $('article').fadeOut( "400", function() {
 
-			var potentialArticles = articles[choice1].filter(function(article){
-				return article.selection === choice2;
-			})
-			var chosenArticle = getRandomArrayElement(potentialArticles);
-			console.log();
 			
-			var userText = $('input[id=headline]').val();
+			
+		// });
+		if(choice1 != undefined && choice2 != undefined){
+			// GETS CONTENT FROM CHOSEN ARTICLE
 			$('.meta-author').html(userText);
-
-			$('.meta-author').html(articles.userText);
 			$('.headline').html(chosenArticle.headline);
 			$('.paragraph').html(chosenArticle.paragraph);
 			$('#layer3').css("background-image", "url("+ chosenArticle.pic3+")"); 
@@ -336,24 +342,45 @@ $(function(){
 			$('#layer3').addClass(chosenArticle['class3']);
 			$('#layer2').addClass(chosenArticle['class2']);
 			$('#layer1').addClass(chosenArticle['class1']);
-
-			console.log(chosenArticle['class2']);
-		});
+			articleLoaded = true;
+			var choice1= undefined;
+			var choice2= undefined;
+		}else{
+			alert('bad bad not good');
+			articleLoaded = false;
+		}
+		if(articleLoaded){
+			$('#toolbox').fadeOut("400");
+			$('article').fadeIn( "400", function() {
+				$('input').prop('checked', false);
+				$('#headline').val('');
+				scrollArticle()
+			})
+		}
+		
 	});
+	function scrollArticle(){
+		if(articleLoaded === true){
+			$('html, body').animate({
+				scrollTop: $("#newsArticle").offset().top
+			}, 400);
+		}
+	}
 	//array full of headlines
 	function getRandomArrayElement(array){
 		var randoNum = Math.floor(Math.random()*array.length);
 		return array[randoNum];
 	}
 	var asideOpen = true;
-	$('.toolboxButton, .Trump-it').on('click', function(e){
-		e.preventDefault();
-		$('#toolbox').toggleClass('toolboxClose');
-  		$('article').fadeIn( "400", function() {
-			$('input').prop('checked', false);
-			$('#headline').val('');
+	$('.toolboxButton').on('click', function(e){
+		// e.preventDefault();
 
-    	})
+	$('#toolbox').removeClass('toolboxClose').fadeIn("400");
+	$('article').fadeOut( "400", function() {
+		// $('input').prop('checked', false);
+		// $('#headline').val('');
+		// scrollArticle()
+	})
 	})
 
 });
